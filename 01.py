@@ -21,10 +21,17 @@ print("-------- Problem 1 --------")
 #         - Your Major
 #         - One Fun fact about yourself
 ### CODE GOES HERE ###
-
+print("Ahmed Baghdadi")
+print("Information Science")
+print("I love working on cars")
 
 # Part 2 : Prompt the user to enter their name, age, and favorite color.
 #          Store these inside 3 different variables, and then print a greeting
 #          e.g. "Hello [name]! You are [age] years old and your favorite color is [color]!"
 ### CODE GOES HERE ###
+name = input("What is your name?")
+age = input("How old are you?")
+color = input("What is your favorite color?")
+
+print(f"Hello {name}! You are {age} years old and your favorite color is {color}!")
 
