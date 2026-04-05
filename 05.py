@@ -153,7 +153,22 @@ def pin_checker():
   # 12345 (returns False)
   # 1111 (returns False)
   # 5678 (returns True)
-  ### CODE GOES HERE ###
+  pin = int(input("Enter your 4-digit PIN: "))
+
+  if pin < 0 or pin > 9999:
+      return False
+
+  first = pin // 1000
+  second = (pin // 100) % 10
+  third = (pin // 10) % 10
+  fourth = pin % 10
+
+  digit_sum = first + second + third + fourth
+
+  if digit_sum >= 10:
+      return True
+  else:
+      return False
 
 
 
@@ -197,6 +212,7 @@ def main():
   # You'll use this variable to check what action they want to take
   # Feel free to add any other variables, you may need to create another one
   user_input = ""
+  balance = 0
 
 
   while (user_input != "quit"): # Loops until the user chooses to quit
@@ -208,11 +224,35 @@ def main():
       # Remember that you DO NOT have to implement the "Quit" option
       # BUT you DO have to implement an "invalid option" case that catches invalid options
       # And "Quit" is a VALID option
-      ### CODE GOES HERE ###
+      if user_input == "check balance":
+          print("Balance: $" + str(balance))
+      elif user_input == "deposit":
+          amount = int(input("How much would you like to deposit? "))
+          if amount < 0:
+              print("Invalid amount.")
+          else:
+              balance += amount
+              print("Balance: $" + str(balance))
+      elif user_input == "withdraw":
+          amount = int(input("How much would you like to withdraw? "))
+          if amount < 0 or amount > balance:
+              print("Invalid amount.")
+          else:
+              balance -= amount
+              print("Balance: $" + str(balance))
+      elif user_input == "lottery":
+          amount = random.randint(-500, 500)
+          balance += amount
+          if amount >= 0:
+              print("You won $" + str(amount) + " and your new balance is $" + str(balance) + "!")
+          else:
+              print("You lost $" + str(abs(amount)) + " and your new balance is $" + str(balance) + "!")
+      elif user_input != "quit":
+          print("Invalid option.")
 
 
   # Print the user balance here
-  ### CODE GOES HERE ###
+  print("Your final balance is: $" + str(balance))
 
 
 
