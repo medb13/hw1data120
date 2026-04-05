@@ -24,7 +24,7 @@ print("-------- Problem 2 --------")
 # Example: age, number of siblings, etc.
 
 # Your turn!
-my_age =   # add your age
+my_age =   22
 
 # ----------------------------
 #        FLOAT (float)
@@ -34,7 +34,7 @@ my_age =   # add your age
 # Example: height, weight, temperature, etc.
 
 # Your turn!
-my_height =   # add your height
+my_height =   5.8
 
 # ----------------------------
 #         STRING (str)
@@ -43,7 +43,7 @@ my_height =   # add your height
 # Example: your name, address, favorite color, etc.
 
 # Your turn!
-my_name =   # add your name
+my_name =   "Ahmed"
 
 # ----------------------------
 #        BOOLEAN (bool)
@@ -53,7 +53,7 @@ my_name =   # add your name
 # Example: is the light on? are you a student?
 
 # Your turn!
-is_student =   # add your status
+is_student =   True
 
 # ----------------------------
 #          CONSTANTS
@@ -63,7 +63,7 @@ is_student =   # add your status
 # Example: the temperature water boils
 
 # Your turn!
-WATER_BOILING_POINT_F = # add the temperature that water boils in Fahrenheit
+WATER_BOILING_POINT_F = 212
 
 # ----------------------------
 #        TYPE CONVERSION
@@ -76,10 +76,12 @@ age_input = input("Enter your age: ")       # this is a string
 # Convert age_input into an integer and store it in age_as_int
 ### CODE GOES HERE ###
 
+age_int = int(age_input)  
+
 height_input = input("Enter your height in feet (example: 5.9): ")  # also a string
 # Convert height_input into a float and store it in height_as_float
 ### CODE GOES HERE ###
-
+height_float = float(height_input)
 
 # ----------------------------
 #          PRINTING
